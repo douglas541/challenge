@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const dbpassword = "admin";
-const dbname = "petshop";
+const dbpassword = "";
+const dbname = "";
 
 const app = express();
 app.use(bodyParser.json());
