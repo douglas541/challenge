@@ -1,0 +1,2131 @@
+{
+    "flow": {
+        "onboarding": {
+            "$contentActions": [
+                {
+                    "input": {
+                        "bypass": false,
+                        "$cardContent": {
+                            "document": {
+                                "id": "8e41b2bb-9795-4a5d-aa0f-5d84755114ad",
+                                "type": "text/plain",
+                                "content": "Entrada do usuário"
+                            },
+                            "editable": false,
+                            "deletable": false,
+                            "position": "right",
+                            "editing": false
+                        },
+                        "$invalid": false
+                    },
+                    "$invalid": false
+                }
+            ],
+            "$conditionOutputs": [
+                {
+                    "stateId": "fb715e3b-f36e-4716-b23a-b22d16d87100",
+                    "$connId": "con_3",
+                    "$id": "fd36cdf3-7696-4156-97cd-30b9e8c38cbc",
+                    "conditions": [
+                        {
+                            "source": "input",
+                            "comparison": "equals",
+                            "values": [
+                                "Oi",
+                                "Olá",
+                                "Bom dia",
+                                "Boa tarde",
+                                "Boa noite"
+                            ]
+                        }
+                    ],
+                    "$invalid": false
+                }
+            ],
+            "$enteringCustomActions": [],
+            "$leavingCustomActions": [],
+            "$inputSuggestions": [],
+            "$defaultOutput": {
+                "stateId": "b1e2daf3-1ea4-4b20-968e-f636c498dca4",
+                "$invalid": false
+            },
+            "$tags": [],
+            "id": "onboarding",
+            "root": true,
+            "$title": "Início",
+            "$position": {
+                "top": "120px",
+                "left": "644px"
+            },
+            "$invalidContentActions": false,
+            "$invalidOutputs": false,
+            "$invalidCustomActions": false,
+            "$invalid": false
+        },
+        "fallback": {
+            "$contentActions": [
+                {
+                    "input": {
+                        "bypass": true,
+                        "$cardContent": {
+                            "document": {
+                                "id": "6c3b6e2e-09c9-4a97-8149-f0f182d2bcb9",
+                                "type": "text/plain"
+                            },
+                            "editable": false,
+                            "deletable": true,
+                            "position": "right",
+                            "editing": false
+                        },
+                        "$invalid": false
+                    },
+                    "$invalid": false
+                }
+            ],
+            "$conditionOutputs": [
+                {
+                    "stateId": "error",
+                    "conditions": [
+                        {
+                            "source": "input",
+                            "comparison": "matches",
+                            "values": [
+                                ".*"
+                            ]
+                        }
+                    ],
+                    "$id": "9efa5708-b489-4b35-9894-87e654e252cf",
+                    "$connId": "con_8",
+                    "$invalid": false
+                }
+            ],
+            "$enteringCustomActions": [],
+            "$leavingCustomActions": [],
+            "$inputSuggestions": [],
+            "$defaultOutput": {
+                "stateId": "onboarding",
+                "$invalid": false
+            },
+            "$tags": [],
+            "id": "fallback",
+            "$title": "Exceções",
+            "$position": {
+                "top": "110px",
+                "left": "1332px"
+            },
+            "$invalidContentActions": false,
+            "$invalidOutputs": false,
+            "$invalidCustomActions": false,
+            "$invalid": false
+        },
+        "error": {
+            "$contentActions": [
+                {
+                    "action": {
+                        "$id": "bb5d3362-7c21-423f-b22e-3bb9aa875051",
+                        "$typeOfContent": "",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "00000000-0000-0000-0000-000000000002",
+                            "type": "application/vnd.lime.chatstate+json",
+                            "content": {
+                                "state": "composing",
+                                "interval": 1000
+                            }
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "00000000-0000-0000-0000-000000000002",
+                                "type": "application/vnd.lime.chatstate+json",
+                                "content": {
+                                    "state": "composing",
+                                    "interval": 1000
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left",
+                            "editing": false
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "action": {
+                        "$id": "5f6edef5-648f-4b08-b22b-903c3c31b6c7",
+                        "$typeOfContent": "",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "00000000-0000-0000-0000-000000000003",
+                            "type": "text/plain",
+                            "content": "Desculpe, não consegui entender!"
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "00000000-0000-0000-0000-000000000003",
+                                "type": "text/plain",
+                                "content": "Desculpe, não consegui entender!"
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left",
+                            "editing": false
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "input": {
+                        "bypass": true,
+                        "$cardContent": {
+                            "document": {
+                                "id": "8304034c-813f-4b18-8e0a-cbf8e852f72b",
+                                "type": "text/plain"
+                            },
+                            "editable": false,
+                            "deletable": true,
+                            "position": "right",
+                            "editing": false
+                        },
+                        "$invalid": false
+                    },
+                    "$invalid": false
+                }
+            ],
+            "$conditionOutputs": [],
+            "$enteringCustomActions": [],
+            "$leavingCustomActions": [],
+            "$inputSuggestions": [],
+            "$defaultOutput": {
+                "stateId": "onboarding",
+                "$invalid": false
+            },
+            "$tags": [],
+            "id": "error",
+            "$title": "Erro padrão",
+            "$position": {
+                "top": "233px",
+                "left": "1332px"
+            },
+            "$invalidContentActions": false,
+            "$invalidOutputs": false,
+            "$invalidCustomActions": false,
+            "$invalid": false
+        },
+        "fb715e3b-f36e-4716-b23a-b22d16d87100": {
+            "$contentActions": [
+                {
+                    "action": {
+                        "$id": "f4d2d274-013b-4cb4-95ec-75a160471363",
+                        "$typeOfContent": "chat-state",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "da54449e-1e2f-4319-a4d1-af393786b2c2",
+                            "type": "application/vnd.lime.chatstate+json",
+                            "content": {
+                                "state": "composing",
+                                "interval": 1000
+                            }
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "da54449e-1e2f-4319-a4d1-af393786b2c2",
+                                "type": "application/vnd.lime.chatstate+json",
+                                "content": {
+                                    "state": "composing",
+                                    "interval": 1000
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "action": {
+                        "$id": "5bb1577c-27d2-4f51-b84c-4750f9c468c5",
+                        "$typeOfContent": "text",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "7552de67-e2b8-42f6-9224-80d039c798f3",
+                            "type": "text/plain",
+                            "content": "Olá, sou o assistente virtual da \nSuch Wow Pets 🐶",
+                            "metadata": {}
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "7552de67-e2b8-42f6-9224-80d039c798f3",
+                                "type": "text/plain",
+                                "content": "Olá, sou o assistente virtual da \nSuch Wow Pets 🐶"
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "input": {
+                        "bypass": true,
+                        "$cardContent": {
+                            "document": {
+                                "id": "87243388-4174-4fb3-951a-2f2cf8285ba9",
+                                "type": "text/plain",
+                                "textContent": "Entrada do usuário",
+                                "content": "Entrada do usuário"
+                            },
+                            "editable": false,
+                            "deletable": true,
+                            "position": "right",
+                            "editing": false
+                        },
+                        "$invalid": false
+                    },
+                    "$invalid": false
+                }
+            ],
+            "$conditionOutputs": [],
+            "$enteringCustomActions": [],
+            "$leavingCustomActions": [],
+            "$inputSuggestions": [],
+            "$defaultOutput": {
+                "stateId": "1e38eaee-0daa-423f-ba1c-f2caad6884bf",
+                "$invalid": false
+            },
+            "$tags": [],
+            "id": "fb715e3b-f36e-4716-b23a-b22d16d87100",
+            "root": false,
+            "$title": "C.1.0.2",
+            "$position": {
+                "top": "239px",
+                "left": "801px"
+            },
+            "$invalidContentActions": false,
+            "$invalidOutputs": false,
+            "$invalidCustomActions": false,
+            "$invalid": false
+        },
+        "b1e2daf3-1ea4-4b20-968e-f636c498dca4": {
+            "$contentActions": [
+                {
+                    "action": {
+                        "$id": "a0fcd0fe-f83c-4b16-893c-7f1424908ba4",
+                        "$typeOfContent": "chat-state",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "dc1b5d15-b87d-4625-b29e-6fcd9e6136c6",
+                            "type": "application/vnd.lime.chatstate+json",
+                            "content": {
+                                "state": "composing",
+                                "interval": 1000
+                            }
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "dc1b5d15-b87d-4625-b29e-6fcd9e6136c6",
+                                "type": "application/vnd.lime.chatstate+json",
+                                "content": {
+                                    "state": "composing",
+                                    "interval": 1000
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "action": {
+                        "$id": "274e515f-2333-42e6-b542-3478d5272879",
+                        "$typeOfContent": "text",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "f8b0d449-5ea2-4784-a636-726c21bb4a77",
+                            "type": "text/plain",
+                            "content": "Opa, deixe eu me apresentar: \nSou o assistente virtual da \nSuch Wow Pets 🐶",
+                            "metadata": {}
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "f8b0d449-5ea2-4784-a636-726c21bb4a77",
+                                "type": "text/plain",
+                                "content": "Opa, deixe eu me apresentar: \nSou o assistente virtual da \nSuch Wow Pets 🐶"
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "input": {
+                        "bypass": true,
+                        "$cardContent": {
+                            "document": {
+                                "id": "a63a6454-7d35-4084-9adc-75750d677f07",
+                                "type": "text/plain",
+                                "textContent": "Entrada do usuário",
+                                "content": "Entrada do usuário"
+                            },
+                            "editable": false,
+                            "deletable": true,
+                            "position": "right",
+                            "editing": false
+                        },
+                        "$invalid": false
+                    },
+                    "$invalid": false
+                }
+            ],
+            "$conditionOutputs": [],
+            "$enteringCustomActions": [],
+            "$leavingCustomActions": [],
+            "$inputSuggestions": [],
+            "$defaultOutput": {
+                "stateId": "1e38eaee-0daa-423f-ba1c-f2caad6884bf",
+                "$invalid": false
+            },
+            "$tags": [],
+            "id": "b1e2daf3-1ea4-4b20-968e-f636c498dca4",
+            "root": false,
+            "$title": "C.1.0.1",
+            "$position": {
+                "top": "236px",
+                "left": "476px"
+            },
+            "$invalidContentActions": false,
+            "$invalidOutputs": false,
+            "$invalidCustomActions": false,
+            "$invalid": false
+        },
+        "1e38eaee-0daa-423f-ba1c-f2caad6884bf": {
+            "$contentActions": [
+                {
+                    "action": {
+                        "$id": "b45c5166-a4d1-4619-a524-8c05ae95c8f0",
+                        "$typeOfContent": "chat-state",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "20268747-9f06-433e-b16f-32f5dabeadc1",
+                            "type": "application/vnd.lime.chatstate+json",
+                            "content": {
+                                "state": "composing",
+                                "interval": 1000
+                            }
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "20268747-9f06-433e-b16f-32f5dabeadc1",
+                                "type": "application/vnd.lime.chatstate+json",
+                                "content": {
+                                    "state": "composing",
+                                    "interval": 1000
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "action": {
+                        "$id": "a15447c8-8f26-458f-a584-ae14cdc280f0",
+                        "$typeOfContent": "text",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "085ceadc-46f4-4cfd-b059-03213a6f2009",
+                            "type": "text/plain",
+                            "content": "Por aqui, posso te apresentar nossos serviços para cuidar do seu pet, como banho, tosa, hotelzinho, e produtos em geral!",
+                            "metadata": {}
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "085ceadc-46f4-4cfd-b059-03213a6f2009",
+                                "type": "text/plain",
+                                "content": "Por aqui, posso te apresentar nossos serviços para cuidar do seu pet, como banho, tosa, hotelzinho, e produtos em geral!"
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "input": {
+                        "bypass": true,
+                        "$cardContent": {
+                            "document": {
+                                "id": "bf6de810-7199-4799-ba60-f1c9972cf591",
+                                "type": "text/plain",
+                                "textContent": "Entrada do usuário",
+                                "content": "Entrada do usuário"
+                            },
+                            "editable": false,
+                            "deletable": true,
+                            "position": "right",
+                            "editing": false
+                        },
+                        "$invalid": false
+                    },
+                    "$invalid": false
+                }
+            ],
+            "$conditionOutputs": [],
+            "$enteringCustomActions": [],
+            "$leavingCustomActions": [],
+            "$inputSuggestions": [],
+            "$defaultOutput": {
+                "stateId": "1be14e25-148a-4174-ba95-73c0ec441083",
+                "$invalid": false
+            },
+            "$tags": [],
+            "id": "1e38eaee-0daa-423f-ba1c-f2caad6884bf",
+            "root": false,
+            "$title": "C.1.0.3",
+            "$position": {
+                "top": "391px",
+                "left": "799px"
+            },
+            "$invalidContentActions": false,
+            "$invalidOutputs": false,
+            "$invalidCustomActions": false,
+            "$invalid": false
+        },
+        "1be14e25-148a-4174-ba95-73c0ec441083": {
+            "$contentActions": [
+                {
+                    "action": {
+                        "$id": "71987176-6e5b-4ae6-8927-039998569768",
+                        "$typeOfContent": "chat-state",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "585e5956-9bff-4437-b1b1-82eb7c934937",
+                            "type": "application/vnd.lime.chatstate+json",
+                            "content": {
+                                "state": "composing",
+                                "interval": 1000
+                            }
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "585e5956-9bff-4437-b1b1-82eb7c934937",
+                                "type": "application/vnd.lime.chatstate+json",
+                                "content": {
+                                    "state": "composing",
+                                    "interval": 1000
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "action": {
+                        "$id": "58bd09b5-b594-4a1a-8891-1fbd02d5670d",
+                        "$typeOfContent": "select-immediate",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "66c928a3-4697-434d-a42f-91b3ffbafe52",
+                            "type": "application/vnd.lime.select+json",
+                            "content": {
+                                "text": "Por favor me diga qual pet vai aproveitar nossos serviços:",
+                                "scope": "immediate",
+                                "options": [
+                                    {
+                                        "text": "Cão",
+                                        "previewText": "Cão",
+                                        "value": null,
+                                        "index": 0,
+                                        "type": null
+                                    }
+                                ]
+                            },
+                            "metadata": {}
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "66c928a3-4697-434d-a42f-91b3ffbafe52",
+                                "type": "application/vnd.lime.select+json",
+                                "content": {
+                                    "text": "Por favor me diga qual pet vai aproveitar nossos serviços:",
+                                    "scope": "immediate",
+                                    "options": [
+                                        {
+                                            "text": "Cão",
+                                            "previewText": "Cão",
+                                            "value": null,
+                                            "index": 0,
+                                            "type": null
+                                        }
+                                    ]
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "input": {
+                        "bypass": false,
+                        "$cardContent": {
+                            "document": {
+                                "id": "7dec30de-98c8-40c1-bf7b-1636d6715ca1",
+                                "type": "text/plain",
+                                "textContent": "Entrada do usuário",
+                                "content": "Entrada do usuário"
+                            },
+                            "editable": false,
+                            "deletable": true,
+                            "position": "right",
+                            "editing": false
+                        },
+                        "$invalid": false
+                    },
+                    "$invalid": false
+                }
+            ],
+            "$conditionOutputs": [
+                {
+                    "stateId": "66b15c1e-731b-4cea-9531-d272f8b310d4",
+                    "$connId": "con_13",
+                    "$id": "071f6c9a-e9dd-4122-8087-17fb5256f81f",
+                    "conditions": [
+                        {
+                            "source": "input",
+                            "comparison": "equals",
+                            "values": [
+                                "Cão"
+                            ]
+                        }
+                    ],
+                    "$invalid": false
+                }
+            ],
+            "$enteringCustomActions": [],
+            "$leavingCustomActions": [
+                {
+                    "$id": "0a4612b2-ea9f-4898-b187-95dea121351d",
+                    "$typeOfContent": "",
+                    "type": "SetVariable",
+                    "$title": "Definir variável",
+                    "$invalid": false,
+                    "settings": {
+                        "variable": "animal",
+                        "value": "Cão"
+                    },
+                    "conditions": []
+                }
+            ],
+            "$inputSuggestions": [
+                "Cão"
+            ],
+            "$defaultOutput": {
+                "stateId": "1be14e25-148a-4174-ba95-73c0ec441083",
+                "$invalid": false
+            },
+            "$tags": [],
+            "id": "1be14e25-148a-4174-ba95-73c0ec441083",
+            "root": false,
+            "$title": "C.1.2.1",
+            "$position": {
+                "top": "539px",
+                "left": "801px"
+            },
+            "$invalidContentActions": false,
+            "$invalidOutputs": false,
+            "$invalidCustomActions": false,
+            "$invalid": false
+        },
+        "66b15c1e-731b-4cea-9531-d272f8b310d4": {
+            "$contentActions": [
+                {
+                    "action": {
+                        "$id": "66971719-a1d5-470d-a531-a7e41694d993",
+                        "$typeOfContent": "chat-state",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "f0b99fbf-3d52-4fd9-96b1-2494378b8ea2",
+                            "type": "application/vnd.lime.chatstate+json",
+                            "content": {
+                                "state": "composing",
+                                "interval": 1000
+                            }
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "f0b99fbf-3d52-4fd9-96b1-2494378b8ea2",
+                                "type": "application/vnd.lime.chatstate+json",
+                                "content": {
+                                    "state": "composing",
+                                    "interval": 1000
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "action": {
+                        "$id": "88bad404-94cc-4f9f-bd3a-4a3e5758eb9b",
+                        "$typeOfContent": "select-immediate",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "c3e93a9d-740f-40e7-83e0-f813849edef2",
+                            "type": "application/vnd.lime.select+json",
+                            "content": {
+                                "text": "Certo, e qual é o porte/tamanho do seu cão?  \n\nPara referência, por favor \nconsidere:\n\n  Pequeno: até 3kg \nMédio: de 3kg a 5kg \nGrande: Acima de 5kg",
+                                "scope": "immediate",
+                                "options": [
+                                    {
+                                        "text": "Pequeno",
+                                        "previewText": "Pequeno",
+                                        "value": null,
+                                        "index": 0,
+                                        "type": null
+                                    },
+                                    {
+                                        "text": "Médio",
+                                        "previewText": "Médio",
+                                        "value": null,
+                                        "index": 1,
+                                        "type": null
+                                    },
+                                    {
+                                        "index": -1,
+                                        "text": "Grande",
+                                        "previewText": "Grande",
+                                        "type": null,
+                                        "value": null
+                                    }
+                                ]
+                            },
+                            "metadata": {}
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "c3e93a9d-740f-40e7-83e0-f813849edef2",
+                                "type": "application/vnd.lime.select+json",
+                                "content": {
+                                    "text": "Certo, e qual é o porte/tamanho do seu cão?  \n\nPara referência, por favor \nconsidere:\n\n  Pequeno: até 3kg \nMédio: de 3kg a 5kg \nGrande: Acima de 5kg",
+                                    "scope": "immediate",
+                                    "options": [
+                                        {
+                                            "text": "Pequeno",
+                                            "previewText": "Pequeno",
+                                            "value": null,
+                                            "index": 0,
+                                            "type": null
+                                        },
+                                        {
+                                            "text": "Médio",
+                                            "previewText": "Médio",
+                                            "value": null,
+                                            "index": 1,
+                                            "type": null
+                                        },
+                                        {
+                                            "index": -1,
+                                            "text": "Grande",
+                                            "previewText": "Grande",
+                                            "type": null,
+                                            "value": null
+                                        }
+                                    ]
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "input": {
+                        "bypass": false,
+                        "$cardContent": {
+                            "document": {
+                                "id": "69c0b99f-5dd9-48d6-a38c-6228778e1f83",
+                                "type": "text/plain",
+                                "textContent": "Entrada do usuário",
+                                "content": "Entrada do usuário"
+                            },
+                            "editable": false,
+                            "deletable": true,
+                            "position": "right",
+                            "editing": false
+                        },
+                        "$invalid": false
+                    },
+                    "$invalid": false
+                }
+            ],
+            "$conditionOutputs": [
+                {
+                    "stateId": "f8249855-dfaa-4ada-968a-36e85e63a99d",
+                    "$connId": "con_18",
+                    "$id": "e0c3957f-6fd4-44f0-9c54-36c3c42afb11",
+                    "conditions": [
+                        {
+                            "source": "input",
+                            "comparison": "equals",
+                            "values": [
+                                "Pequeno",
+                                "Médio",
+                                "Grande"
+                            ]
+                        }
+                    ],
+                    "$invalid": false
+                }
+            ],
+            "$enteringCustomActions": [],
+            "$leavingCustomActions": [
+                {
+                    "$id": "2b93dfcb-6048-4d60-83bf-8e0e475f6a94",
+                    "$typeOfContent": "",
+                    "type": "ExecuteScript",
+                    "$title": "Executar script",
+                    "$invalid": false,
+                    "settings": {
+                        "function": "run",
+                        "source": "function run(inputVariable1) {\n    if (inputVariable1 === \"Pequeno\")\n        return \"até 3kg\";\n    else if (inputVariable1 === \"Médio\")\n        return \"de 3kg a 5kg\";\n\n    return \"acima de 5kg\";\n}",
+                        "inputVariables": [
+                            "input.content"
+                        ],
+                        "outputVariable": "caracteristica"
+                    },
+                    "conditions": []
+                }
+            ],
+            "$inputSuggestions": [
+                "Pequeno",
+                "Médio",
+                "Grande"
+            ],
+            "$defaultOutput": {
+                "stateId": "fallback",
+                "$invalid": false
+            },
+            "$tags": [],
+            "id": "66b15c1e-731b-4cea-9531-d272f8b310d4",
+            "root": false,
+            "$title": "C.1.2.2",
+            "$position": {
+                "top": "683px",
+                "left": "801px"
+            },
+            "$invalidContentActions": false,
+            "$invalidOutputs": false,
+            "$invalidCustomActions": false,
+            "$invalid": false
+        },
+        "f8249855-dfaa-4ada-968a-36e85e63a99d": {
+            "$contentActions": [
+                {
+                    "action": {
+                        "$id": "de0cf339-9ed4-4ab5-be52-52b8d6d5c4b1",
+                        "$typeOfContent": "chat-state",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "67ddcf90-8ea6-4488-bc6d-f5b3e4978052",
+                            "type": "application/vnd.lime.chatstate+json",
+                            "content": {
+                                "state": "composing",
+                                "interval": 1000
+                            }
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "67ddcf90-8ea6-4488-bc6d-f5b3e4978052",
+                                "type": "application/vnd.lime.chatstate+json",
+                                "content": {
+                                    "state": "composing",
+                                    "interval": 1000
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "action": {
+                        "$id": "9137e11f-8503-4378-a6a9-e99d09bb5074",
+                        "$typeOfContent": "select-immediate",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "2c4afdea-1f2d-4e13-8d62-1194d2156a5a",
+                            "type": "application/vnd.lime.select+json",
+                            "content": {
+                                "text": "Só pra confirmar, estamos falando então de um {{animal}} de {{caracteristica}} ?",
+                                "scope": "immediate",
+                                "options": [
+                                    {
+                                        "text": "Isso mesmo",
+                                        "previewText": "Isso mesmo",
+                                        "value": null,
+                                        "index": 0,
+                                        "type": null
+                                    },
+                                    {
+                                        "text": "corrigir",
+                                        "previewText": "corrigir",
+                                        "value": null,
+                                        "index": 1,
+                                        "type": null
+                                    }
+                                ]
+                            },
+                            "metadata": {}
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "2c4afdea-1f2d-4e13-8d62-1194d2156a5a",
+                                "type": "application/vnd.lime.select+json",
+                                "content": {
+                                    "text": "Só pra confirmar, estamos falando então de um {{animal}} de {{caracteristica}} ?",
+                                    "scope": "immediate",
+                                    "options": [
+                                        {
+                                            "text": "Isso mesmo",
+                                            "previewText": "Isso mesmo",
+                                            "value": null,
+                                            "index": 0,
+                                            "type": null
+                                        },
+                                        {
+                                            "text": "corrigir",
+                                            "previewText": "corrigir",
+                                            "value": null,
+                                            "index": 1,
+                                            "type": null
+                                        }
+                                    ]
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "input": {
+                        "bypass": false,
+                        "$cardContent": {
+                            "document": {
+                                "id": "375f1464-3bef-447f-8544-d9227c8c2f06",
+                                "type": "text/plain",
+                                "textContent": "Entrada do usuário",
+                                "content": "Entrada do usuário"
+                            },
+                            "editable": false,
+                            "deletable": true,
+                            "position": "right",
+                            "editing": false
+                        },
+                        "$invalid": false
+                    },
+                    "$invalid": false
+                }
+            ],
+            "$conditionOutputs": [
+                {
+                    "stateId": "333e3b33-2a3a-4048-bd1d-c871ac9bbd73",
+                    "$connId": "con_23",
+                    "$id": "afff646c-32b4-4fe0-9583-4aebdbf62769",
+                    "conditions": [
+                        {
+                            "source": "input",
+                            "comparison": "equals",
+                            "values": [
+                                "Isso mesmo"
+                            ]
+                        }
+                    ],
+                    "$invalid": false
+                },
+                {
+                    "stateId": "1be14e25-148a-4174-ba95-73c0ec441083",
+                    "$connId": "con_28",
+                    "$id": "8640b45c-6783-480c-a6c7-f4757fd84156",
+                    "conditions": [
+                        {
+                            "source": "input",
+                            "comparison": "equals",
+                            "values": [
+                                "corrigir"
+                            ]
+                        }
+                    ],
+                    "$invalid": false
+                }
+            ],
+            "$enteringCustomActions": [],
+            "$leavingCustomActions": [],
+            "$inputSuggestions": [
+                "Isso mesmo",
+                "corrigir"
+            ],
+            "$defaultOutput": {
+                "stateId": "fallback",
+                "$invalid": false
+            },
+            "$tags": [],
+            "id": "f8249855-dfaa-4ada-968a-36e85e63a99d",
+            "root": false,
+            "$title": "C.1.2.4",
+            "$position": {
+                "top": "819px",
+                "left": "800px"
+            },
+            "$invalidContentActions": false,
+            "$invalidOutputs": false,
+            "$invalidCustomActions": false,
+            "$invalid": false
+        },
+        "333e3b33-2a3a-4048-bd1d-c871ac9bbd73": {
+            "$contentActions": [
+                {
+                    "action": {
+                        "$id": "39ebe741-54bb-4326-927b-bb6574b643da",
+                        "$typeOfContent": "chat-state",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "8329631a-08a1-4b3f-adec-95e051b9ac6b",
+                            "type": "application/vnd.lime.chatstate+json",
+                            "content": {
+                                "state": "composing",
+                                "interval": 1000
+                            }
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "8329631a-08a1-4b3f-adec-95e051b9ac6b",
+                                "type": "application/vnd.lime.chatstate+json",
+                                "content": {
+                                    "state": "composing",
+                                    "interval": 1000
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "action": {
+                        "$id": "601fcfeb-00eb-4c16-9611-f0e7e42b2c22",
+                        "$typeOfContent": "select-immediate",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "3475cdf5-0391-4cd7-b4d8-b3fc0e63fa78",
+                            "type": "application/vnd.lime.select+json",
+                            "content": {
+                                "text": "Por aqui posso te ajudar com essas opções para o seu {{animal}} de {{caracteristica}}:\n\n1 - Banho e Tosa",
+                                "scope": "immediate",
+                                "options": [
+                                    {
+                                        "text": "<b> 1 - </b> Banho e Tosa",
+                                        "previewText": "<b> 1 - </b> Banho e Tosa",
+                                        "value": null,
+                                        "index": 0,
+                                        "type": null
+                                    }
+                                ]
+                            },
+                            "metadata": {}
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "3475cdf5-0391-4cd7-b4d8-b3fc0e63fa78",
+                                "type": "application/vnd.lime.select+json",
+                                "content": {
+                                    "text": "Por aqui posso te ajudar com essas opções para o seu {{animal}} de {{caracteristica}}:\n\n1 - Banho e Tosa",
+                                    "scope": "immediate",
+                                    "options": [
+                                        {
+                                            "text": "<b> 1 - </b> Banho e Tosa",
+                                            "previewText": "<b> 1 - </b> Banho e Tosa",
+                                            "value": null,
+                                            "index": 0,
+                                            "type": null
+                                        }
+                                    ]
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "input": {
+                        "bypass": false,
+                        "$cardContent": {
+                            "document": {
+                                "id": "4ee98c82-efe5-4c3e-af06-c55cce1c37f8",
+                                "type": "text/plain",
+                                "textContent": "Entrada do usuário",
+                                "content": "Entrada do usuário"
+                            },
+                            "editable": false,
+                            "deletable": true,
+                            "position": "right",
+                            "editing": false
+                        },
+                        "$invalid": false
+                    },
+                    "$invalid": false
+                }
+            ],
+            "$conditionOutputs": [
+                {
+                    "stateId": "cd189d6d-dc2b-4831-8e02-debfb24eb559",
+                    "$connId": "con_33",
+                    "$id": "5bc47c51-8169-426f-ae88-ffa39c850eb9",
+                    "conditions": [
+                        {
+                            "source": "input",
+                            "comparison": "contains",
+                            "values": [
+                                "Banho e Tosa"
+                            ]
+                        }
+                    ],
+                    "$invalid": false
+                }
+            ],
+            "$enteringCustomActions": [],
+            "$leavingCustomActions": [],
+            "$inputSuggestions": [
+                "<b> 1 - </b> Banho e Tosa"
+            ],
+            "$defaultOutput": {
+                "stateId": "fallback",
+                "$invalid": false
+            },
+            "$tags": [],
+            "id": "333e3b33-2a3a-4048-bd1d-c871ac9bbd73",
+            "root": false,
+            "$title": "A.1.0.1",
+            "$position": {
+                "top": "956px",
+                "left": "800px"
+            },
+            "$invalidContentActions": false,
+            "$invalidOutputs": false,
+            "$invalidCustomActions": false,
+            "$invalid": false
+        },
+        "cd189d6d-dc2b-4831-8e02-debfb24eb559": {
+            "$contentActions": [
+                {
+                    "action": {
+                        "$id": "fad2066b-f664-4405-9132-ec18782eb276",
+                        "$typeOfContent": "chat-state",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "64f9ade8-9cdc-4c6e-8cef-53000a703f9c",
+                            "type": "application/vnd.lime.chatstate+json",
+                            "content": {
+                                "state": "composing",
+                                "interval": 1000
+                            }
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "64f9ade8-9cdc-4c6e-8cef-53000a703f9c",
+                                "type": "application/vnd.lime.chatstate+json",
+                                "content": {
+                                    "state": "composing",
+                                    "interval": 1000
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false,
+                    "$$hashKey": "object:1110"
+                },
+                {
+                    "action": {
+                        "$id": "2cd93e58-447c-4272-8108-4174b8f4e4fb",
+                        "$typeOfContent": "select-immediate",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "b1529d0f-8f81-4094-9078-87a886a1360b",
+                            "type": "application/vnd.lime.select+json",
+                            "content": {
+                                "text": "Manter a regularidade do banho e tosa é importante para higiene do Pet!\n\n  Para um {{animal}} de {{caracteristica}}, nós cobramos:\n\n🚿 Banho:  R$ {{response@banho}}\n\n✂️ Tosa:  R$ {{response@tosa}}\n\n  Para agendar os dois serviços, considere o desconto de {{response@desconto}}%!\n\n  Gostaria de <b>agendar um horário</b>?",
+                                "scope": "immediate",
+                                "options": [
+                                    {
+                                        "text": "Sim, agendar!",
+                                        "previewText": "Sim, agendar!",
+                                        "value": null,
+                                        "index": 0,
+                                        "type": null
+                                    },
+                                    {
+                                        "text": "Agora não...",
+                                        "previewText": "Agora não...",
+                                        "value": null,
+                                        "index": 1,
+                                        "type": null
+                                    }
+                                ]
+                            },
+                            "metadata": {}
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "b1529d0f-8f81-4094-9078-87a886a1360b",
+                                "type": "application/vnd.lime.select+json",
+                                "content": {
+                                    "text": "Manter a regularidade do banho e tosa é importante para higiene do Pet!\n\n  Para um {{animal}} de {{caracteristica}}, nós cobramos:\n\n🚿 Banho:  R$ {{response@banho}}\n\n✂️ Tosa:  R$ {{response@tosa}}\n\n  Para agendar os dois serviços, considere o desconto de {{response@desconto}}%!\n\n  Gostaria de <b>agendar um horário</b>?",
+                                    "scope": "immediate",
+                                    "options": [
+                                        {
+                                            "text": "Sim, agendar!",
+                                            "previewText": "Sim, agendar!",
+                                            "value": null,
+                                            "index": 0,
+                                            "type": null
+                                        },
+                                        {
+                                            "text": "Agora não...",
+                                            "previewText": "Agora não...",
+                                            "value": null,
+                                            "index": 1,
+                                            "type": null
+                                        }
+                                    ]
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false,
+                    "$$hashKey": "object:1111"
+                },
+                {
+                    "input": {
+                        "bypass": false,
+                        "$cardContent": {
+                            "document": {
+                                "id": "1d5ade64-8f6b-4ca0-acdb-2415d3fc1c7b",
+                                "type": "text/plain",
+                                "textContent": "Entrada do usuário",
+                                "content": "Entrada do usuário"
+                            },
+                            "editable": false,
+                            "deletable": true,
+                            "position": "right",
+                            "editing": false
+                        },
+                        "$invalid": false
+                    },
+                    "$invalid": false,
+                    "$$hashKey": "object:1112"
+                }
+            ],
+            "$conditionOutputs": [
+                {
+                    "stateId": "67bf6518-cfdd-4a03-923b-5ac0ff72143c",
+                    "$connId": "con_38",
+                    "$id": "52046450-f7ec-4ef7-b689-779fceca453a",
+                    "conditions": [
+                        {
+                            "source": "input",
+                            "comparison": "equals",
+                            "values": [
+                                "Sim, agendar!"
+                            ],
+                            "$$hashKey": "object:1331"
+                        }
+                    ],
+                    "$invalid": false,
+                    "$$hashKey": "object:1309"
+                },
+                {
+                    "stateId": "9cb96d87-afe6-474f-a08a-5e0cdeb0a513",
+                    "$connId": "con_43",
+                    "$id": "e29f7da9-336d-4304-bd5b-910f61d7b646",
+                    "conditions": [
+                        {
+                            "source": "input",
+                            "comparison": "equals",
+                            "values": [
+                                "Agora não..."
+                            ],
+                            "$$hashKey": "object:1354"
+                        }
+                    ],
+                    "$invalid": false,
+                    "$$hashKey": "object:1310"
+                }
+            ],
+            "$enteringCustomActions": [
+                {
+                    "$id": "5947c9a6-c826-48cc-a57e-f1f54be4805c",
+                    "$typeOfContent": "",
+                    "type": "ProcessHttp",
+                    "$title": "Requisição HTTP",
+                    "$invalid": false,
+                    "settings": {
+                        "headers": {},
+                        "method": "GET",
+                        "uri": "https://2456-45-237-212-251.ngrok.io/",
+                        "responseStatusVariable": "status",
+                        "responseBodyVariable": "response"
+                    },
+                    "conditions": []
+                }
+            ],
+            "$leavingCustomActions": [],
+            "$inputSuggestions": [
+                "Sim, agendar!",
+                "Agora não..."
+            ],
+            "$defaultOutput": {
+                "stateId": "cd189d6d-dc2b-4831-8e02-debfb24eb559",
+                "$invalid": false
+            },
+            "$tags": [],
+            "id": "cd189d6d-dc2b-4831-8e02-debfb24eb559",
+            "root": false,
+            "$title": "A.2.0.0",
+            "$position": {
+                "top": "1091px",
+                "left": "800px"
+            },
+            "$invalidContentActions": false,
+            "$invalidOutputs": false,
+            "$invalidCustomActions": false,
+            "$invalid": false
+        },
+        "67bf6518-cfdd-4a03-923b-5ac0ff72143c": {
+            "$contentActions": [
+                {
+                    "action": {
+                        "$id": "5e802dc9-6085-4d28-acf9-8c8197341ca7",
+                        "$typeOfContent": "chat-state",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "3e73e0ba-c348-40af-88d0-b607476efef8",
+                            "type": "application/vnd.lime.chatstate+json",
+                            "content": {
+                                "state": "composing",
+                                "interval": 1000
+                            }
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "3e73e0ba-c348-40af-88d0-b607476efef8",
+                                "type": "application/vnd.lime.chatstate+json",
+                                "content": {
+                                    "state": "composing",
+                                    "interval": 1000
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "action": {
+                        "$id": "6cd84655-149a-4d02-bacb-abf8d12081df",
+                        "$typeOfContent": "text",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "ff280f00-82fe-4233-b423-e5aadac20b6c",
+                            "type": "text/plain",
+                            "content": "Espere um pouquinho...\nVou conferir a disponibilidade!",
+                            "metadata": {}
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "ff280f00-82fe-4233-b423-e5aadac20b6c",
+                                "type": "text/plain",
+                                "content": "Espere um pouquinho...\nVou conferir a disponibilidade!"
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "input": {
+                        "bypass": true,
+                        "$cardContent": {
+                            "document": {
+                                "id": "29e08c8e-c807-4bb2-9bde-c6c78e2776fe",
+                                "type": "text/plain",
+                                "textContent": "Entrada do usuário",
+                                "content": "Entrada do usuário"
+                            },
+                            "editable": false,
+                            "deletable": true,
+                            "position": "right",
+                            "editing": false
+                        },
+                        "$invalid": false
+                    },
+                    "$invalid": false
+                }
+            ],
+            "$conditionOutputs": [],
+            "$enteringCustomActions": [],
+            "$leavingCustomActions": [],
+            "$inputSuggestions": [],
+            "$defaultOutput": {
+                "stateId": "1419145f-56b1-42b3-ab76-a04d7006daf2",
+                "$invalid": false
+            },
+            "$tags": [],
+            "id": "67bf6518-cfdd-4a03-923b-5ac0ff72143c",
+            "root": false,
+            "$title": "A.4.0.1",
+            "$position": {
+                "top": "1254px",
+                "left": "560px"
+            },
+            "$invalidContentActions": false,
+            "$invalidOutputs": false,
+            "$invalidCustomActions": false,
+            "$invalid": false
+        },
+        "9cb96d87-afe6-474f-a08a-5e0cdeb0a513": {
+            "$contentActions": [
+                {
+                    "action": {
+                        "$id": "1880457a-f4b9-4fa8-aa0a-b9f2d1f55fc9",
+                        "$typeOfContent": "chat-state",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "232ca5ca-6944-4403-8676-b76b11d76be9",
+                            "type": "application/vnd.lime.chatstate+json",
+                            "content": {
+                                "state": "composing",
+                                "interval": 1000
+                            }
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "232ca5ca-6944-4403-8676-b76b11d76be9",
+                                "type": "application/vnd.lime.chatstate+json",
+                                "content": {
+                                    "state": "composing",
+                                    "interval": 1000
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "action": {
+                        "$id": "517b9efe-987e-4174-9841-0d4bdec3d850",
+                        "$typeOfContent": "select-immediate",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "08ef6916-3462-4012-83c9-961b8e9301c1",
+                            "type": "application/vnd.lime.select+json",
+                            "content": {
+                                "text": "Lembrando que esse é o preço para um {{animal}} de {{caracteristica}}.\n\nGostaria de ver o preço para um pet diferente?",
+                                "scope": "immediate",
+                                "options": [
+                                    {
+                                        "text": "Sim",
+                                        "previewText": "Sim",
+                                        "value": null,
+                                        "index": 0,
+                                        "type": null
+                                    },
+                                    {
+                                        "text": "Não",
+                                        "previewText": "Não",
+                                        "value": null,
+                                        "index": 1,
+                                        "type": null
+                                    }
+                                ]
+                            },
+                            "metadata": {}
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "08ef6916-3462-4012-83c9-961b8e9301c1",
+                                "type": "application/vnd.lime.select+json",
+                                "content": {
+                                    "text": "Lembrando que esse é o preço para um {{animal}} de {{caracteristica}}.\n\nGostaria de ver o preço para um pet diferente?",
+                                    "scope": "immediate",
+                                    "options": [
+                                        {
+                                            "text": "Sim",
+                                            "previewText": "Sim",
+                                            "value": null,
+                                            "index": 0,
+                                            "type": null
+                                        },
+                                        {
+                                            "text": "Não",
+                                            "previewText": "Não",
+                                            "value": null,
+                                            "index": 1,
+                                            "type": null
+                                        }
+                                    ]
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "input": {
+                        "bypass": false,
+                        "$cardContent": {
+                            "document": {
+                                "id": "72cd0642-89b7-4a58-b7b8-5c25b716bd7e",
+                                "type": "text/plain",
+                                "textContent": "Entrada do usuário",
+                                "content": "Entrada do usuário"
+                            },
+                            "editable": false,
+                            "deletable": true,
+                            "position": "right",
+                            "editing": false
+                        },
+                        "$invalid": false
+                    },
+                    "$invalid": false
+                }
+            ],
+            "$conditionOutputs": [
+                {
+                    "stateId": "1be14e25-148a-4174-ba95-73c0ec441083",
+                    "$connId": "con_48",
+                    "$id": "6b84ac7d-2484-4349-8782-f9bda33115d3",
+                    "conditions": [
+                        {
+                            "source": "input",
+                            "comparison": "equals",
+                            "values": [
+                                "Sim"
+                            ]
+                        }
+                    ],
+                    "$invalid": false
+                },
+                {
+                    "stateId": "95af473c-4064-4ceb-a5d2-230fb476ecb7",
+                    "$connId": "con_53",
+                    "$id": "345fa7a7-6caf-4cce-9248-fdca15a209b7",
+                    "conditions": [
+                        {
+                            "source": "input",
+                            "comparison": "equals",
+                            "values": [
+                                "Não"
+                            ]
+                        }
+                    ],
+                    "$invalid": false
+                }
+            ],
+            "$enteringCustomActions": [],
+            "$leavingCustomActions": [],
+            "$inputSuggestions": [
+                "Sim",
+                "Não"
+            ],
+            "$defaultOutput": {
+                "stateId": "fallback",
+                "$invalid": false
+            },
+            "$tags": [],
+            "id": "9cb96d87-afe6-474f-a08a-5e0cdeb0a513",
+            "root": false,
+            "$title": "A.1.0.2",
+            "$position": {
+                "top": "1262px",
+                "left": "1028px"
+            },
+            "$invalidContentActions": false,
+            "$invalidOutputs": false,
+            "$invalidCustomActions": false,
+            "$invalid": false
+        },
+        "95af473c-4064-4ceb-a5d2-230fb476ecb7": {
+            "$contentActions": [
+                {
+                    "action": {
+                        "$id": "1128d444-43b7-4159-a85e-dea3ea3b1bd7",
+                        "$typeOfContent": "chat-state",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "8f9ae89c-4453-40ea-bca1-b3d2ce87001b",
+                            "type": "application/vnd.lime.chatstate+json",
+                            "content": {
+                                "state": "composing",
+                                "interval": 1000
+                            }
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "8f9ae89c-4453-40ea-bca1-b3d2ce87001b",
+                                "type": "application/vnd.lime.chatstate+json",
+                                "content": {
+                                    "state": "composing",
+                                    "interval": 1000
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "action": {
+                        "$id": "c079a698-756a-4f8b-90b1-da85d833777c",
+                        "$typeOfContent": "text",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "3345d997-33d3-4ae2-b7be-daba69c6c81e",
+                            "type": "text/plain",
+                            "content": "Gostaria de agradecer pelo contato e dizer que estamos sempre à disposição.\n\nAté a próxima!  😉👍",
+                            "metadata": {}
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "3345d997-33d3-4ae2-b7be-daba69c6c81e",
+                                "type": "text/plain",
+                                "content": "Gostaria de agradecer pelo contato e dizer que estamos sempre à disposição.\n\nAté a próxima!  😉👍"
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "input": {
+                        "bypass": true,
+                        "$cardContent": {
+                            "document": {
+                                "id": "9b61f77d-c9df-4fe7-8fc9-9152cc35dbe8",
+                                "type": "text/plain",
+                                "textContent": "Entrada do usuário",
+                                "content": "Entrada do usuário"
+                            },
+                            "editable": false,
+                            "deletable": true,
+                            "position": "right",
+                            "editing": false
+                        },
+                        "$invalid": false
+                    },
+                    "$invalid": false
+                }
+            ],
+            "$conditionOutputs": [],
+            "$enteringCustomActions": [],
+            "$leavingCustomActions": [],
+            "$inputSuggestions": [],
+            "$defaultOutput": {
+                "stateId": "fallback",
+                "$invalid": false
+            },
+            "$tags": [],
+            "id": "95af473c-4064-4ceb-a5d2-230fb476ecb7",
+            "root": false,
+            "$title": "F.Agradecimento",
+            "$position": {
+                "top": "1419px",
+                "left": "1028px"
+            },
+            "$invalidContentActions": false,
+            "$invalidOutputs": false,
+            "$invalidCustomActions": false,
+            "$invalid": false
+        },
+        "1419145f-56b1-42b3-ab76-a04d7006daf2": {
+            "$contentActions": [
+                {
+                    "action": {
+                        "$id": "209ce243-3c1c-473a-bb50-67790825dfe1",
+                        "$typeOfContent": "chat-state",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "80f82c08-3f16-49e2-a762-ff18282f043e",
+                            "type": "application/vnd.lime.chatstate+json",
+                            "content": {
+                                "state": "composing",
+                                "interval": 1000
+                            }
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "80f82c08-3f16-49e2-a762-ff18282f043e",
+                                "type": "application/vnd.lime.chatstate+json",
+                                "content": {
+                                    "state": "composing",
+                                    "interval": 1000
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "action": {
+                        "$id": "5daeb793-a256-4162-9cb9-adf09480c078",
+                        "$typeOfContent": "select-immediate",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "64c3a1be-d624-4271-bc83-566d6dab9b55",
+                            "type": "application/vnd.lime.select+json",
+                            "content": {
+                                "text": "Os próximos dias com disponibilidade para banho e tosa para o seu {{animal}} são:",
+                                "scope": "immediate",
+                                "options": [
+                                    {
+                                        "text": "<b> 1 -</b> {{calendar.datetime}}, manhã",
+                                        "previewText": "<b> 1 -</b> {{calendar.datetime}},...",
+                                        "value": null,
+                                        "index": 0,
+                                        "type": null
+                                    },
+                                    {
+                                        "text": "<b> 2 -</b> {{calendar.datetime}}, tarde",
+                                        "previewText": "<b> 2 -</b> {{calendar.datetime}},...",
+                                        "value": null,
+                                        "index": 1,
+                                        "type": null
+                                    }
+                                ]
+                            },
+                            "metadata": {}
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "64c3a1be-d624-4271-bc83-566d6dab9b55",
+                                "type": "application/vnd.lime.select+json",
+                                "content": {
+                                    "text": "Os próximos dias com disponibilidade para banho e tosa para o seu {{animal}} são:",
+                                    "scope": "immediate",
+                                    "options": [
+                                        {
+                                            "text": "<b> 1 -</b> {{calendar.datetime}}, manhã",
+                                            "previewText": "<b> 1 -</b> {{calendar.datetime}},...",
+                                            "value": null,
+                                            "index": 0,
+                                            "type": null
+                                        },
+                                        {
+                                            "text": "<b> 2 -</b> {{calendar.datetime}}, tarde",
+                                            "previewText": "<b> 2 -</b> {{calendar.datetime}},...",
+                                            "value": null,
+                                            "index": 1,
+                                            "type": null
+                                        }
+                                    ]
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "input": {
+                        "bypass": false,
+                        "$cardContent": {
+                            "document": {
+                                "id": "cf6e5ad2-8249-4ec5-8811-3dbd583de145",
+                                "type": "text/plain",
+                                "textContent": "Entrada do usuário",
+                                "content": "Entrada do usuário"
+                            },
+                            "editable": false,
+                            "deletable": true,
+                            "position": "right",
+                            "editing": false
+                        },
+                        "$invalid": false
+                    },
+                    "$invalid": false
+                }
+            ],
+            "$conditionOutputs": [
+                {
+                    "stateId": "8f2aa93f-6823-41ac-886d-2fd00f4a2255",
+                    "$connId": "con_58",
+                    "$id": "c6020732-8088-497d-8250-0c9de53f606c",
+                    "conditions": [
+                        {
+                            "source": "input",
+                            "comparison": "equals",
+                            "values": [
+                                "<b> 1 -</b> {{calendar.datetime}}, manhã",
+                                "<b> 2 -</b> {{calendar.datetime}}, tarde"
+                            ]
+                        }
+                    ],
+                    "$invalid": false
+                }
+            ],
+            "$enteringCustomActions": [],
+            "$leavingCustomActions": [
+                {
+                    "$id": "7f0070bd-5206-4769-900b-3db57a84f8b4",
+                    "$typeOfContent": "",
+                    "type": "SetVariable",
+                    "$title": "Definir variável",
+                    "$invalid": false,
+                    "settings": {
+                        "variable": "horario",
+                        "value": "{{input.content}}"
+                    },
+                    "conditions": []
+                }
+            ],
+            "$inputSuggestions": [
+                "<b> 1 -</b> {{calendar.datetime}}, manhã",
+                "<b> 2 -</b> {{calendar.datetime}}, tarde"
+            ],
+            "$defaultOutput": {
+                "stateId": "1419145f-56b1-42b3-ab76-a04d7006daf2",
+                "$invalid": false
+            },
+            "$tags": [],
+            "id": "1419145f-56b1-42b3-ab76-a04d7006daf2",
+            "root": false,
+            "$title": "A.4.3.0",
+            "$position": {
+                "top": "1397px",
+                "left": "561px"
+            },
+            "$invalidContentActions": false,
+            "$invalidOutputs": false,
+            "$invalidCustomActions": false,
+            "$invalid": false
+        },
+        "8f2aa93f-6823-41ac-886d-2fd00f4a2255": {
+            "$contentActions": [
+                {
+                    "action": {
+                        "$id": "96bfc19b-0c7d-4123-bdbc-17673829d7b2",
+                        "$typeOfContent": "chat-state",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "9cd48924-a8c3-4bc6-9088-8ddc3df32830",
+                            "type": "application/vnd.lime.chatstate+json",
+                            "content": {
+                                "state": "composing",
+                                "interval": 1000
+                            }
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "9cd48924-a8c3-4bc6-9088-8ddc3df32830",
+                                "type": "application/vnd.lime.chatstate+json",
+                                "content": {
+                                    "state": "composing",
+                                    "interval": 1000
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "action": {
+                        "$id": "8664f6e4-8ce2-4e18-bf97-dff50dcece86",
+                        "$typeOfContent": "select-immediate",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "1e16a997-9aec-47e2-8fcd-e1c5be201238",
+                            "type": "application/vnd.lime.select+json",
+                            "content": {
+                                "text": "Certo!\n\nConfirmado, então:\n\nBanho e Tosa para {{animal}} {{caracteristica}} na data {{horario}}\n\nPosso confirmar o agendamento?",
+                                "scope": "immediate",
+                                "options": [
+                                    {
+                                        "text": "Sim",
+                                        "previewText": "Sim",
+                                        "value": null,
+                                        "index": 0,
+                                        "type": null
+                                    },
+                                    {
+                                        "text": "Não",
+                                        "previewText": "Não",
+                                        "value": null,
+                                        "index": 1,
+                                        "type": null
+                                    }
+                                ]
+                            },
+                            "metadata": {}
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "1e16a997-9aec-47e2-8fcd-e1c5be201238",
+                                "type": "application/vnd.lime.select+json",
+                                "content": {
+                                    "text": "Certo!\n\nConfirmado, então:\n\nBanho e Tosa para {{animal}} {{caracteristica}} na data {{horario}}\n\nPosso confirmar o agendamento?",
+                                    "scope": "immediate",
+                                    "options": [
+                                        {
+                                            "text": "Sim",
+                                            "previewText": "Sim",
+                                            "value": null,
+                                            "index": 0,
+                                            "type": null
+                                        },
+                                        {
+                                            "text": "Não",
+                                            "previewText": "Não",
+                                            "value": null,
+                                            "index": 1,
+                                            "type": null
+                                        }
+                                    ]
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "input": {
+                        "bypass": false,
+                        "$cardContent": {
+                            "document": {
+                                "id": "a9ec33f4-30d0-4e68-9977-f5bdfe624cc3",
+                                "type": "text/plain",
+                                "textContent": "Entrada do usuário",
+                                "content": "Entrada do usuário"
+                            },
+                            "editable": false,
+                            "deletable": true,
+                            "position": "right",
+                            "editing": false
+                        },
+                        "$invalid": false
+                    },
+                    "$invalid": false
+                }
+            ],
+            "$conditionOutputs": [
+                {
+                    "stateId": "14c8ce71-c1d6-4a9f-9b03-131d4b073b0d",
+                    "$connId": "con_63",
+                    "$id": "69c39879-e70f-4936-a3cd-944a5447ca21",
+                    "conditions": [
+                        {
+                            "source": "input",
+                            "comparison": "equals",
+                            "values": [
+                                "Sim"
+                            ]
+                        }
+                    ],
+                    "$invalid": false
+                }
+            ],
+            "$enteringCustomActions": [],
+            "$leavingCustomActions": [],
+            "$inputSuggestions": [
+                "Sim",
+                "Não"
+            ],
+            "$defaultOutput": {
+                "stateId": "95af473c-4064-4ceb-a5d2-230fb476ecb7",
+                "$invalid": false
+            },
+            "$tags": [],
+            "id": "8f2aa93f-6823-41ac-886d-2fd00f4a2255",
+            "root": false,
+            "$title": "A.4.4.1",
+            "$position": {
+                "top": "1545px",
+                "left": "561px"
+            },
+            "$invalidContentActions": false,
+            "$invalidOutputs": false,
+            "$invalidCustomActions": false,
+            "$invalid": false
+        },
+        "14c8ce71-c1d6-4a9f-9b03-131d4b073b0d": {
+            "$contentActions": [
+                {
+                    "action": {
+                        "$id": "9af75ad8-3bac-4105-beac-b9aa66b30bdc",
+                        "$typeOfContent": "chat-state",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "cb39a5e2-02a1-45bb-943a-dd6ccaea156a",
+                            "type": "application/vnd.lime.chatstate+json",
+                            "content": {
+                                "state": "composing",
+                                "interval": 1000
+                            }
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "cb39a5e2-02a1-45bb-943a-dd6ccaea156a",
+                                "type": "application/vnd.lime.chatstate+json",
+                                "content": {
+                                    "state": "composing",
+                                    "interval": 1000
+                                }
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "action": {
+                        "$id": "f6af09b8-8542-4030-a106-a9d83425ee08",
+                        "$typeOfContent": "text",
+                        "type": "SendMessage",
+                        "settings": {
+                            "id": "f3ca9a69-b400-499d-994b-cf31989399d0",
+                            "type": "text/plain",
+                            "content": "Perfeito! Está confirmado!!\nAguardamos você e seu {{animal}}!!",
+                            "metadata": {}
+                        },
+                        "$cardContent": {
+                            "document": {
+                                "id": "f3ca9a69-b400-499d-994b-cf31989399d0",
+                                "type": "text/plain",
+                                "content": "Perfeito! Está confirmado!!\nAguardamos você e seu {{animal}}!!"
+                            },
+                            "editable": true,
+                            "deletable": true,
+                            "position": "left"
+                        }
+                    },
+                    "$invalid": false
+                },
+                {
+                    "input": {
+                        "bypass": true,
+                        "$cardContent": {
+                            "document": {
+                                "id": "174c981b-165d-459c-9996-5698d0196294",
+                                "type": "text/plain",
+                                "textContent": "Entrada do usuário",
+                                "content": "Entrada do usuário"
+                            },
+                            "editable": false,
+                            "deletable": true,
+                            "position": "right",
+                            "editing": false
+                        },
+                        "$invalid": false
+                    },
+                    "$invalid": false
+                }
+            ],
+            "$conditionOutputs": [],
+            "$enteringCustomActions": [],
+            "$leavingCustomActions": [],
+            "$inputSuggestions": [],
+            "$defaultOutput": {
+                "stateId": "95af473c-4064-4ceb-a5d2-230fb476ecb7",
+                "$invalid": false
+            },
+            "$tags": [],
+            "id": "14c8ce71-c1d6-4a9f-9b03-131d4b073b0d",
+            "root": false,
+            "$title": "A.4.4.2",
+            "$position": {
+                "top": "1506px",
+                "left": "393px"
+            },
+            "$invalidContentActions": false,
+            "$invalidOutputs": false,
+            "$invalidCustomActions": false,
+            "$invalid": false
+        }
+    },
+    "globalAction": {
+        "$contentActions": [],
+        "$conditionOutputs": [],
+        "$enteringCustomActions": [],
+        "$leavingCustomActions": [],
+        "$inputSuggestions": [],
+        "$defaultOutput": {
+            "stateId": "fallback",
+            "$invalid": false
+        },
+        "$tags": [],
+        "id": "global-actions",
+        "$invalidContentActions": false,
+        "$invalidOutputs": false,
+        "$invalidCustomActions": false
+    }
+}
